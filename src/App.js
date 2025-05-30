@@ -8,7 +8,6 @@ export default function App() {
       <div className="container">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>Welcome to Dictionary App</p>
         </header>
 
         <main className="">
@@ -16,7 +15,15 @@ export default function App() {
         </main>
 
         <footer className="app-footer">
-          <small>Coded by Dulce Figueredo</small>
+          <small>
+            Coded by Dulce Figueredo and is opened sourced on{" "}
+            <a
+              className=""
+              href="https://github.com/DulcePy/shecodes-react-dictionary"
+            >
+              GitHub
+            </a>
+          </small>
         </footer>
       </div>
     </div>
