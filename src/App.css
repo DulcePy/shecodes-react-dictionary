@@ -1,9 +1,10 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-header {
   margin: 30px 0;
+  text-align: center;
 }
 
 .App-logo {
