@@ -2,17 +2,19 @@ import React from "react";
 import "./Phonetic.css";
 
 export default function Phonetic(props) {
-  if (!props.phonetic || !props.phonetic.text || !props.phonetic.audio) {
+  if (!props.phonetic) {
     return null;
-  } else {
-    return (
-      <div className="Phonetic">
-        <span className="text phonetic">{props.phonetic.text}</span> <br />
+  }
+  const { text, audio } = props.phonetic;
+  return (
+    <div className="Phonetic">
+      {text && <span className="text phonetic">{text}</span>} <br />
+      {audio && (
         <audio controls>
-          <source src={props.phonetic.audio} type="audio/mpeg" />
+          <source src={audio} type="audio/mpeg" /> <br />
           Your browser does not support the audio element.
         </audio>
-      </div>
-    );
-  }
+      )}
+    </div>
+  );
 }
