@@ -4,32 +4,59 @@ import "./Dictionary.css";
 import Results from "./Results";
 
 export default function Dictionary() {
-  let [keyword, setkeyword] = useState("");
+  let [keyword, setkeyword] = useState("sunset");
   let [results, setResults] = useState(null);
+  let [loaded, setLoaded] = useState(false);
 
   function handleResponse(response) {
     setResults(response.data[0]);
   }
 
-  function search(event) {
-    event.preventDefault();
+  function handleError(_error) {
+    setResults(null);
+    alert("Word not found, search for another.");
+  }
+
+  function search() {
     let apiURL = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
-    axios.get(apiURL).then(handleResponse);
+    axios.get(apiURL).then(handleResponse).catch(handleError);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
   }
 
   function handleKeywordChange(event) {
     setkeyword(event.target.value);
   }
 
-  return (
-    <div className="Dictionary">
-      
-      <form onSubmit={search} className="">
-        <label>Enter a word to search!</label>
-        <input className="" type="search" onChange={handleKeywordChange} />
-      </form>
+  function load() {
+    setLoaded(true);
+    search();
+  }
 
-      <Results results={results}/>
-    </div>
-  );
+  if (loaded) {
+    return (
+      <div className="Dictionary">
+        <section>
+          <h2 className="form-title">What word do you want to look up? 🔎</h2>
+          <form onSubmit={handleSubmit}>
+            <input
+              placeholder="Enter a word to search"
+              type="search"
+              onChange={handleKeywordChange}
+            />
+          </form>
+          <div className="hint">
+            suggested words: sunset, yoga, love, happiness, nature
+          </div>
+        </section>
+        <Results results={results} />
+      </div>
+    );
+  } else {
+    load();
+    return "Loading...";
+  }
 }

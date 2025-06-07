@@ -1,4 +1,5 @@
 import React from "react";
+import "./Phonetic.css";
 
 export default function Phonetic(props) {
   if (!props.phonetic || !props.phonetic.text || !props.phonetic.audio) {
@@ -6,7 +7,7 @@ export default function Phonetic(props) {
   } else {
     return (
       <div className="Phonetic">
-        <span className="text">{props.phonetic.text}</span> <br />
+        <span className="text phonetic">{props.phonetic.text}</span> <br />
         <audio controls>
           <source src={props.phonetic.audio} type="audio/mpeg" />
           Your browser does not support the audio element.

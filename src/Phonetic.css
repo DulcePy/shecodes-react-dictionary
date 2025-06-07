@@ -1,0 +1,12 @@
+.Phonetic span{
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    color: rgb(83, 83, 83);
+} 
+
+audio {
+    width: 70%;
+    border-radius: 10px;
+    margin-top: 8px;
+}
