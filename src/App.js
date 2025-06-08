@@ -11,7 +11,7 @@ export default function App() {
 
         <footer className="app-footer">
           <small>
-            Coded by Dulce Figueredo and is opened sourced on{" "}
+            Coded by <strong>Dulce Figueredo</strong> and is opened sourced on{" "}
             <a href="https://github.com/DulcePy/shecodes-react-dictionary">
               GitHub
             </a>
