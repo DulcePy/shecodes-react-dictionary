@@ -52,7 +52,7 @@ export default function Dictionary() {
     return (
       <div className="Dictionary">
         <section>
-          <h2 className="form-title">What word do you want to look up? 🔎</h2>
+          <h2 className="form-title">What word do you want to look up?</h2>
           <form onSubmit={handleSubmit}>
             <input
               placeholder="Enter a word to search"

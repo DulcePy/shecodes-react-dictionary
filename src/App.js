@@ -17,6 +17,9 @@ export default function App() {
             </a>
           </small>
         </footer>
+        <a className="btn-float" href="#">
+          <i className="lni lni-angle-double-up"></i>
+        </a>
       </div>
     </div>
   );
