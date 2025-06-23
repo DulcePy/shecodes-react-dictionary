@@ -5,7 +5,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <main>
+        <main id="home">
           <Dictionary />
         </main>
 
@@ -17,7 +17,7 @@ export default function App() {
             </a>
           </small>
         </footer>
-        <a className="btn-float" href="#">
+        <a className="btn-float" href="#home">
           <i className="lni lni-angle-double-up"></i>
         </a>
       </div>
