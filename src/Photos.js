@@ -1,6 +1,7 @@
 import React from "react";
 import "./Photos.css";
 
+/* display the pictures */
 export default function Photos(props) {
   if (props.photos) {
     return (

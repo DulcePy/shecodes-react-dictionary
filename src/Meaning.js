@@ -2,6 +2,7 @@ import React from "react";
 import Synonyms from "./Synonyms";
 import "./Meaning.css";
 
+/* display the word definition and examples */
 export default function Meaning(props) {
   return (
     <div className="Meaning">

@@ -1,6 +1,7 @@
 import React from "react";
 import "./Phonetic.css";
 
+/* display the word phonetic */
 export default function Phonetic(props) {
   if (!props.phonetic) {
     return null;

@@ -1,6 +1,8 @@
 import React from "react";
 import "./Synonyms.css";
 
+/* display the word synonyms */
+
 export default function Synonyms(props) {
     if (props.synonyms && props.synonyms.length > 0) {
         return (
