@@ -5,4 +5,4 @@
   The website is hosted on <a href="https://my-super-dictionary.netlify.app/">Netlify</a>
 </p>
 
-<img src="https://github.com/DulcePy/portfolio-dulce/blob/main/images/projects/react-dictionary.png" alt="React Dictionary" width="600">
+<img src="https://github.com/DulcePy/portfolio-dulce/blob/main/images/projects/react-dictionary.png" alt="React Dictionary" width="700">
